@@ -72,7 +72,7 @@ public class Item {
 			}
 			
 			// Prepare the HTML table to be displayed
-			output = "<table border = \"1\">"
+			output = "<table border = \"1\" class=\"table\">"
 					+ "<tr><th>Item Code</th><th>Item Name</th><th>Item Price</th><th>Item Description</th>"
 					+ "<th>Update</th><th>Remove</th></tr>";
 			
@@ -100,9 +100,9 @@ public class Item {
 				output += "<td>"+rs_itemDesc+"</td>";
 				
 				// Add buttons 
-				output += "<td><input name=\"btnUpdate\" type=\"button\" value=\"Update\"></td>\r\n"
+				output += "<td><input name=\"btnUpdate\" type=\"button\" value=\"Update\" class=\"btn btn-secondary\"></td>\r\n"
 						+ "<td><form method=\"post\" action=\"Items.jsp\">"
-						+ "<input name=\"btnRemove\" type=\"submit\" value=\"Remove\">"
+						+ "<input name=\"btnRemove\" type=\"submit\" value=\"Remove\" class=\"btn btn-danger\">"
 						+ "<input name=\"itemID\" type=\"hidden\" value=\""+rs_itemID+"\">"
 						+ "</form></td></tr>";
 			}
